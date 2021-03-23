@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#444444">
+    <title>Bingo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="bingo.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="buttons">
+            <button id="callNum">
+                Call a Number
+            </button>
+            <button id="setGame">
+                Start/Reset Game
+            </button>
+        </div>
+        <div id="result"></div>
+        <div id="numberscalled-wrapper">
+            <h3>Numbers Called</h3>
+            <ol id="numberscalled" start="1"></ol>
+        </div>
+
+        <audio id="sound-play" preload="auto">
+            <source src="start.mp3" type="audio/mp3">
+        </audio>
+        <audio id="sound-pause" preload="auto">
+            <source src="pause.mp3" type="audio/mp3">
+        </audio>
+        <footer>
+            <p>Created with <span>❤</span> By: Marvin</p>
+        </footer>
+    </div>
+</body>
+</html>
