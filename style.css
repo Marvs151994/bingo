@@ -1,0 +1,124 @@
+body {
+    font-family: arial, sans-serif;
+    margin: 0;
+    background: #e0e0e0;
+}
+
+.wrapper {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#result {
+    border: 1px solid #ffffff;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    font-size: 50px;
+    font-weight: bold;
+    justify-content: center;
+    height: 150px;
+    margin: 0 auto 10px;
+    background: black;
+    color: white;
+    margin-top: 16px;
+}
+
+#numberscalled-wrapper {
+    text-align: center;
+    border: 1px solid gray;
+    padding: 0 20px 20px 20px;
+    background: #ffffff;
+}
+
+#numberscalled-wrapper h3 {
+    color: red;
+}
+
+.number {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+  width: 500px;
+}
+
+#buttons {
+    display: inline-flex;
+    width: 100%;
+}
+
+#callNum {
+    height: 80px;
+    width: 60%;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px #bcbcbc;
+    margin: 0 auto;
+    font-size: 18px;
+    background: linear-gradient(to bottom, #00cbff 0%, #5c00ff 100%);
+}
+
+
+#setGame {
+    height: 80px;
+    width: 35%;
+    color: white;
+    background: linear-gradient(to bottom, #00cbff 0%, #5c00ff 100%);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px #bcbcbc;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+#numberscalled {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0 auto;
+    padding: 0;
+}
+
+    #numberscalled li {
+        align-items: center;
+        border: solid 2px #2909ff;
+        display: flex;
+        justify-content: center;
+        height: 40px;
+        margin: 4px;
+        width: 40px;
+        border-radius: 100%;
+        background: #ff0000;
+        color: white;
+        padding: 5px;
+        font-weight: 700;
+    }
+
+footer {
+    background: black;
+    height: 34px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    color: white;
+    text-align: center;
+}
+
+footer span {
+    color: red;
+}
+
+    footer p {
+        margin-top: 7px;
+    }
+
+@media (max-width: 767px) {
+    .number {
+        width: 100%;
+    }
+}
