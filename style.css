@@ -222,6 +222,7 @@ h2 {
 .bingoCol {
   border-left: 2px solid rgba(0,0,0,0.31);
   position:relative;
+ pointer-events: none;
 }
 
 .helpNav {
