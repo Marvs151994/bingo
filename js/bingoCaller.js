@@ -326,7 +326,7 @@ var Speech = function() {
             }
 
             // set default voice object to a random one on load
-            speechInstance.voice = englishVoices[Math.floor(Math.random() * englishVoices.length)];
+           speechInstance.voice = englishVoices[Math.floor(Math.random() * englishVoices.length)];
 
             for (var a = 0; a < englishVoices.length; a++) {
                 var classes = 'voice cyan lighten-1 btn waves-effect ';
