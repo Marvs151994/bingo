@@ -17,73 +17,42 @@
     <meta name="twitter:site" content="@codemasterkarol" />
     <meta name="twitter:title" content="Let's Play Bingo!" />
     <meta name="twitter:description" content="Free Online Bingo Caller: use this bingo caller to host your own bingo games at home! You provide the cards, we generate the bingo numbers! Completely free bingo app - no downloads necessary!" />
-    <meta name="twitter:image" content="http://letsplaybingo.io/images/icons/ogimage.png" /><meta name="twitter:image:alt" content="Let's Play Bingo Site Preview" />
-
-    <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/images/icons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+    <meta name="twitter:image" content="http://letsplaybingo.io/images/icons/ogimage.png" />
+    <meta name="twitter:image:alt" content="Let's Play Bingo Site Preview" />
 
     <link rel="manifest" href="/images/icons/manifest.json">
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body class="flow-text">
 
-<header>
     <div class="row">
-        <div class="col s12 m9">
+        <div class="col d-none">
             <div class="row">
-                <div class="col s12 m6">
-                    <h1><a href="index.html"><img src="images/logo.svg" alt="Lets Play Bingo Logo"></a></h1>
-                </div>
                 <div class="col s12 m6 right-align">
                     <div class="addthis_inline_share_toolbox"></div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col s12">
-                    <p class="description">Use this free bingo caller to host your own bingo games at home!<br>You provide the cards, we generate the bingo numbers! Completely free bingo app - no downloads necessary!</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col s12">
-                    <div id="buttons">
-                        <a class="btn green waves-effect " id="startGame">Start Game</a>
-                        <a class="btn orange waves-effect disabled" id="pauseGame"><i class="material-icons">pause</i></a>
-                        <a class="btn cyan waves-effect disabled" id="resumeGame"><i class="material-icons">play_arrow</i></a>
-                        <a class="btn cyan waves-effect disabled" id="nextBall">Next Ball</a>
-                        <a class="btn red waves-effect disabled" id="resetGame">Reset Board</a>
-                    </div>
-                </div>
-            </div>
         </div>
-        <div class="col s12 m3">
-            <h3>Current Call</h3>
-            <div id="currentBall" class="valign-wrapper"><div id="ballGraphic"><span id="ballText"></span></div><span id="callNumber"></span></div>
-        </div>
-    </div>
-</header>
+        <div class="inline-flex">
+            <div id="buttons">
+                <a class="btn green waves-effect d-none" id="startGame">Start Game</a>
+                <a class="btn orange waves-effect disabled d-none" id="pauseGame"><i class="material-icons">pause</i></a>
+                <a class="btn cyan waves-effect disabled d-none" id="resumeGame"><i class="material-icons">play_arrow</i></a>
+                <a class="btn cyan" id="nextBall">Draw</a>
+                <div id="currentBall" class=""><div id="ballGraphic"><span id="ballText"></span></div></div>
+                <div id="callNumber"></div>
+                <a class="btn red" id="resetGame">Reset</a>
 
-    <div class="row">
-        <div class="col s12">
+            </div>
             <div class="center-align grey darken-4 grey-text text-darken-2" id="bingoboard"></div>
         </div>
     </div>
 
     <div class="row">
-        <div class="col s12 m6">
+        <div class="col s12 m6 d-none">
             <div id="delayrange">
                 <i class="material-icons">timer_off</i>
                 <form action="#">
@@ -94,30 +63,15 @@
                 <i class="material-icons">timer</i>
             </div>
         </div>
-        <div class="col s12 m6">
+        <div class="col s12 m6 d-none">
             <div id="voices"></div>
         </div>
     </div>
 
-<footer>
-    <div class="row">
-        <div class="col s12 m4 left-align">
-            <p>For entertainment purposes only. See full <a href="disclaimer.html">disclaimer</a>.</p>
-        </div>
-        <div class="col s12 m4 center-align">
-            <p>Let's Play Bingo! &copy; <script>document.write(new Date().getFullYear())</script> <a href="http://karolbrennan.com" class="red-text">Karol Brennan</a></p>
-        </div>
-        <div class="col s12 m4 right-align">
-            <p>Check out this project on <a href="http://github.com/codemasterkarol/bingocaller">GitHub</a>!</p>
-        </div>
-    </div>
-</footer>
+    <script src="js/bingoCaller.js"></script>
 
-<script src="js/bingoCaller.js"></script>
-
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="js/materialize.min.js"></script>
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-586d4324ccbaf284"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
 
 </body>
 </html>
