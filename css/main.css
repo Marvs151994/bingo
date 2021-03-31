@@ -11,6 +11,10 @@ header img {
     height: auto;
 }
 
+body {
+    background-image: url("/images/koi.jpg");
+}
+
 .d-none {
     display: none;
 }
