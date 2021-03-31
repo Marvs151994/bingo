@@ -10,6 +10,16 @@ header img {
     max-width: 12rem;
     height: auto;
 }
+
+.d-none {
+    display: none;
+}
+
+.inline-flex {
+    display: inline-flex;
+    width: 100%;
+}
+
 #voices {
     text-align: right;
 }
@@ -83,8 +93,15 @@ footer { padding: 1rem 1.5rem 0.5rem; }
     font-weight: bold;
 }
 
+#buttons {
+    width: 30%;
+    padding: 20px;
+}
+
 /* Sizing */
-#bingoboard { width: 100%; }
+#bingoboard {
+    width: 70%;
+}
 .letter, .ball { width: 6.25%; padding: 0.5rem; }
 
 /* Bingo Board */
@@ -108,19 +125,38 @@ footer { padding: 1rem 1.5rem 0.5rem; }
 
 /* Balls */
 #ballGraphic, #ballText {
-    padding: 0.8em 1.3em;
-    margin: 0.5em auto;
+/*    padding: 0.8em 1.3em;
+    margin: 0.5em auto;*/
     border-radius: 100%;
 }
+
+.ball {
+    border-radius: 100% !important;
+    width: 40px !important;
+    background: #797979;
+    text-align: center;
+    margin: 0 auto;
+    height: 40px;
+    color: #cac8c8;
+    margin-top: 2px;
+    font-size: 17px;
+}
+
+.called {
+    background: red;
+    color: white;
+}
+
 #ballText {
     line-height: 1;
     padding: 0.5em 1em;
     font-weight: bold;
 }
 #currentBall {
-    background: #ececec;
-    min-height: 12rem;
     position: relative;
+    width: 4rem;
+    top: 14px;
+    margin: 0 auto;
 }
 #ballText:not(:empty) {
     border: 1px solid red;
@@ -131,22 +167,21 @@ footer { padding: 1rem 1.5rem 0.5rem; }
     padding: 0.5em 1.2em;
 }
 #callNumber:not(:empty) {
-    position: absolute;
-    bottom: 0.5em;
-    right: 0.5em;
-    background: white;
-    color: #444;
     font-size: 1rem;
-    font-weight: normal;
     padding: 0.5em;
+    color: #212121;
+    width: 100%;
+    text-align: center;
+    font-weight: 900;
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 #ballGraphic.blue, #ballGraphic.red, #ballGraphic.white, #ballGraphic.green, #ballGraphic.orange {
-    margin-top: -0.5rem;
+    /*margin-top: -0.5rem;*/
     position: relative;
-    box-shadow: inset 0.5rem 0.5rem 1.5rem 0.25rem rgba(255,255,255,0.3), inset -0.25rem -0.25rem 1.5rem 0.5rem rgba(0,0,0,0.4);
 }
 
-#ballGraphic.blue:after, #ballGraphic.red:after,
+/*#ballGraphic.blue:after, #ballGraphic.red:after,
 #ballGraphic.white:after, #ballGraphic.green:after, #ballGraphic.orange:after {
     content: '';
     background: radial-gradient(circle at 50% -150%, rgba(0,0,0,0.4), transparent);
@@ -157,9 +192,9 @@ footer { padding: 1rem 1.5rem 0.5rem; }
     left: 17%;
     border-radius: 100%;
     margin: 0 auto;
-}
+}*/
 /* Ball Colors */
-#ballGraphic.blue {
+/*#ballGraphic.blue {
     background: radial-gradient(circle at 20% 20%, #0000FF, #0000ad);
 }
 #ballGraphic.blue #ballText {
@@ -188,7 +223,7 @@ footer { padding: 1rem 1.5rem 0.5rem; }
 }
 #ballGraphic.orange #ballText {
     border: 0.15rem solid #FFA500;
-}
+}*/
 
 /* Footer */
 footer {
@@ -196,6 +231,10 @@ footer {
 }
 footer p {
     font-size: 0.75rem;
+}
+
+.letter-block {
+    border: 1px solid #b58786;
 }
 
 /* Mobile Sizes */
@@ -209,9 +248,7 @@ footer p {
         display: block;
         width: 100%;
     }
-    #buttons a {
-        width: 48%;
-    }
+
     .voice {
         width: 48%;
         margin: 1%;
@@ -219,6 +256,7 @@ footer p {
     .letter-block {
         display: inline-block;
         width: 20%;
+        border: 1px solid #b58786;
     }
     .letter, .ball {
         width: 100%;
