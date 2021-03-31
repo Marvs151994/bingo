@@ -133,7 +133,6 @@ var Bingo = function(bingoBoardElement, speechInstance) {
      */
     function resumeGameListener(){
         document.getElementById('pauseGame').classList.remove('disabled');
-        document.getElementById('nextBall').classList.add('disabled');
         this.classList.add('disabled');
         // if currently set to manual, change to the next value then continue calling
         if(parseInt(document.getElementById('range').value) === 16) {
@@ -163,11 +162,6 @@ var Bingo = function(bingoBoardElement, speechInstance) {
         // clear the current ball
         document.getElementById('ballText').innerHTML = '';
         document.getElementById('ballGraphic').className = '';
-        document.getElementById('startGame').classList.remove('disabled');
-        document.getElementById('pauseGame').classList.add('disabled');
-        document.getElementById('resumeGame').classList.add('disabled');
-        document.getElementById('nextBall').classList.add('disabled');
-        this.classList.add('disabled');
         // regenerate bingo board
         generateBingoBoard();
     }
@@ -184,7 +178,6 @@ var Bingo = function(bingoBoardElement, speechInstance) {
                 document.getElementById('pauseGame').classList.add('disabled');
                 clearInterval(ballCallingInterval);
             } else {
-                document.getElementById('nextBall').classList.add('disabled');
                 clearInterval(ballCallingInterval);
                 ballCallingInterval = window.setInterval(callBingoBall, parseInt(document.getElementById('range').value) * 1000);
             }
@@ -268,7 +261,7 @@ var Bingo = function(bingoBoardElement, speechInstance) {
             bingoInstance.calledBingoNumbers.push(newBallNumber);
 
             // keep track of number of balls called.
-            document.getElementById('callNumber').innerHTML = "Ball #" + bingoInstance.calledBingoNumbers.length.toString() + "</span>";
+            document.getElementById('callNumber').innerHTML = "Drawn " + bingoInstance.calledBingoNumbers.length.toString() + "</span>";
         }
     }
 };
